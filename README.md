@@ -1,71 +1,76 @@
-# Resume Analyzer Web App :memo::computer:
+# AI Resume Ranking & Screening System 📝💻
 
-![GitHub last commit](https://img.shields.io/github/last-commit/iamamanporwal/resume-ranker)
-![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
+![AI Resume Ranker Header](readme_banner.png)
 
-An interactive web application that analyzes resumes based on a job description using natural language processing techniques. https://www.youtube.com/watch?v=0eo_5oyW11o&t=1s
+An interactive, high-tech recruitment intelligence dashboard designed to streamline candidate screening using Natural Language Processing (NLP) and semantic text analysis. It analyzes and ranks PDF resumes against a job description, providing recruiters with visual dashboards, score comparisons, and downloadable reports.
 
-## :rocket: Features
+---
 
-- Upload job descriptions and resumes in PDF format.
-- Process resumes to extract names, emails, and text content.
-- Calculate the similarity between the job description and each resume.
-- Rank resumes based on similarity percentage.
-- Download the ranked resumes in a CSV file. (Fixed by @atiumcache)
-- Dark Mode Contributed by @hbalickgoodman 
+## 🚀 Key Features
 
-## :wrench: Setup and Usage
+* **🧠 Smart Entity Extraction**: Automatically extracts candidate names and emails using pre-loaded **spaCy NER** (Named Entity Recognition) models and regex fallbacks.
+* **📊 Semantic Similarity Matching**: Computes accurate TF-IDF vector representations of job descriptions and resumes, ranking candidates using **Cosine Similarity** scores.
+* **📈 Interactive Data Visualizations**: Renders dynamic score distribution graphs using **Chart.js** directly on the dashboard.
+* **📁 Cumulative Drag & Drop Upload**: A custom styled glassmorphic dropzone allows recruiters to upload multiple resumes in rounds, managing files seamlessly in a queue before analysis.
+* **🔎 Search & Score Filtering**: Real-time client-side search by candidate name, email, or skill badges, combined with a match score range slider.
+* **🎨 Dual-Theme Design**: Sleek floating dark mode (default indigo/fuchsia neon space) and slate-light mode toggles with smooth transitions.
+* **📥 Instant CSV Reports**: Quick export of candidate rankings, emails, match scores, and filenames with a single click.
 
-1. Clone the repository:
-   ```sh
-   https://github.com/iamamanporwal/resume-ranker.git
-   ```
+---
 
-2. Navigate to the project directory:
-   ```sh
-   cd resume-analyzer
-   ```
+## 🖥️ User Interface Preview
 
-3. Install dependencies (Install the latest libraries instead of the specific ones mentioned in the txt file):
-   ```sh
-   pip install -r requirements.txt
-   ```
+![Recruiter Dashboard Preview](dashboard_preview.png)
 
-4. Run the Flask app:
-   ```sh
-   python app.py
-   ```
+---
 
-5. Access the app in your web browser at `http://localhost:5000`.
+## 🛠️ Setup and Usage
 
-## :file_folder: Directory Structure
+Follow these steps to run the application locally:
 
+### 1. Clone the repository:
+```sh
+git clone https://github.com/samriddhi04singh-collab/AI-resume-ranking-system.git
+cd AI-resume-ranking-system
 ```
-├── app.py
+
+### 2. Install dependencies:
+Install the required libraries (we recommend using the latest package releases):
+```sh
+pip install -r requirements.txt
+```
+
+### 3. Run the Flask application:
+```sh
+python app.py
+```
+
+### 4. Access the web app:
+Open your browser and navigate to:
+👉 **[http://localhost:5000](http://localhost:5000)**
+
+---
+
+## 📁 Directory Structure
+```
+├── app.py                  # Flask server containing NLP matching & entity parsing
+├── resume_ranker.py        # CLI version of the analyzer script
 ├── static/
-│   └── styles.css
+│   └── styles.css          # Design system stylesheet (Light/Dark themes)
 ├── templates/
-│   └── index.html
-├── uploads/             # Uploaded resumes will be saved here
-├── requirements.txt
-├── README.md
-└── .gitignore
+│   └── index.html          # Recruiter dashboard UI template (Chart.js / Lucide Icons)
+├── uploads/                # Temporary directory storing candidate files
+├── readme_banner.png       # AI-generated header illustration
+├── dashboard_preview.png   # Website visual mockup screenshot
+├── requirements.txt        # Python package dependencies
+└── README.md               # Repository documentation
 ```
 
+---
 
-## :memo: Contributing
+## 👩‍💻 Developer
 
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+Developed with ❤️ by **Samriddhi Singh**
 
-## :bulb: Inspiration
-
-This project was inspired by the desire to create an interactive tool for HR professionals to easily analyze job applicants' resumes.
-
-## :mailbox: Contact
-
-Have questions or feedback? Feel free to reach out via [aman07porwal@gmail.com](mailto:aman07porwal@gmail.com).
-
-##
-Developed with :heart: by Aman Porwal
-
-
+* **GitHub**: [@samriddhi04singh-collab](https://github.com/samriddhi04singh-collab)
+* **Email**: [samriddhi04singh@gmail.com](mailto:samriddhi04singh@gmail.com)
